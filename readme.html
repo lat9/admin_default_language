@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Admin Default Language</title>
+
+<style type="text/css">
+<!--
+a, a:active, a:visited {
+  color: #006666;
+  text-decoration: none
+}
+a:hover {
+    color:#00CC99;
+    text-decoration: underline;
+}
+BODY, P, H1, H2, H3, H4, H5, H6, LI, TD, DD, DT {
+  font-family: Verdana, AvantGarde, Tahoma, Arial, sans-serif;
+  font-size: 10pt;
+  color: black;
+  padding: 0px;
+  margin: 20px;
+}
+H1, H2, H3, H4 {
+  font-weight: bold
+}
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 16px;
+}
+code {
+  padding-left: 25px;
+}
+ol li {
+  margin-left: 0;
+}
+pre { margin-left: 20px; }
+-->
+</style>
+</head>
+
+<body>
+<a name="top" id="top"></a>
+<h1>Admin Default Language</h1>
+<h3>Version 1.0.0</h3>
+<p>Current Support Thread at Zen Cart Forums: <a href="http://www.zen-cart.com/showthread.php?213980-Admin-Default-Language-Support-Thread">http://www.zen-cart.com/showthread.php?213980-Admin-Default-Language-Support-Thread</a>.  This software is provided for your use under the GNU General Public License.</p>
+<h2>Version History:</h2>
+<ul>
+  <li>v1.0.0, 2014-07-17, Initial release.</li>
+</ul>
+<h2>What it does</h2>
+<p>You've got a multi-language store and you'd like the default language used in your Zen Cart admin to be different than the default language used in your store.  This plugin defaults your admin-panel's language to <em>English</em>, but you can change the behavior to use any of your installed languages.  Just change one line in the file provided by this plugin, changing the <b>en</b> to one of the 2-character language codes supported by your store:</p>
+<pre>if (!defined ('DEFAULT_LANGUAGE_ADMIN')) define ('DEFAULT_LANGUAGE_ADMIN', 'en');  //-Default admin to English</pre>
+<p>If you are logged into your admin when you make this change, you'll need to log out and then back in to have the change take effect!</p>
+
+<h2>Installation</h2>
+<p>There is one <span class="corefile">core-file</span> overwrite in this plugin; you should <strong>always</strong> backup your cart&rsquo;s database and files prior to making any changes.</p>
+<p>Copy the file to your store's file-system, after renaming the &quot;YOUR_ADMIN&quot; directory to match your custom admin folder's name:</p>
+<ol>
+  <li>/YOUR_ADMIN/includes/init_includes/init_languages.php</li>
+</ol>
+</body>
+</html>
